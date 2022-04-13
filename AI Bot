@@ -1,0 +1,24 @@
+# Inport the package lib to use
+import wikipedia
+
+# Functions above the code which is calling them.
+def write_to_file(text_to_write);
+    # Open file and place it in a append mode.
+    file_obj_essay = open("essay.txt", "a")
+    # writing to file
+    file_obj_essay.write(text_to_write)
+    # close the file
+
+# Welocme Title
+print("\n\n\t\t Research Robot \n")
+# Print out a line to break up page for a btter UX
+print("_" *100, "\n")
+# Ask user what they would like Research robot to search?
+# Then use input to get the topic and sssign into a string varibale
+users_main_topic_choice = input("\nWhat would you like me to reseach? ")
+print("Researching " + users_main_topic_choice)
+# print out a line to break up page
+print("_" *100, "\n")
+# Gvie our AI the ability to reseach for us!
+# Create a var to hold the reseach results
+raw_research_results = wikipedia.page(users_main_topic_choice)
